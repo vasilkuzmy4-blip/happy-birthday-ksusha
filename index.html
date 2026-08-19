@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- чтобы после правки texts.js страница не показывала старый текст из кэша -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<!-- страница личная: не пускаем её в поисковики -->
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<title>Ксюше — 27</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 62'%3E%3Cg fill='%23c9102f'%3E%3Cpath d='M3.5 25.5C9 12 21 3.5 29.5 6.5c6.5 2.3 14 9.5 20.5 14.5 6.5-5 14-12.2 20.5-14.5 8.5-3 20.5 5.5 26 19C80.5 21 65 18.6 50 18.6S19.5 21 3.5 25.5Z'/%3E%3Cpath d='M3.5 27.6C19.5 23.4 35 21.2 50 21.2s30.5 2.2 46.5 6.4C90.5 45.5 72 59 50 59S9.5 45.5 3.5 27.6Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="kiss" viewBox="0 0 100 62">
+    <!-- верхняя губа -->
+    <path d="M3.5 25.5C9 12 21 3.5 29.5 6.5c6.5 2.3 14 9.5 20.5 14.5 6.5-5 14-12.2 20.5-14.5 8.5-3 20.5 5.5 26 19C80.5 21 65 18.6 50 18.6S19.5 21 3.5 25.5Z"/>
+    <!-- нижняя губа -->
+    <path d="M3.5 27.6C19.5 23.4 35 21.2 50 21.2s30.5 2.2 46.5 6.4C90.5 45.5 72 59 50 59S9.5 45.5 3.5 27.6Z"/>
+  </symbol>
+</svg>
+
+<main class="page">
+
+  <header class="topline">
+    <span class="topline__dot"></span>
+    <span class="topline__text" id="topDate">19 августа</span>
+    <span class="topline__dot"></span>
+  </header>
+
+  <section class="poster" id="poster">
+    <div class="collage" id="collage">
+
+      <article class="center" id="center">
+        <svg class="center__kiss center__kiss--a"><use href="#kiss"/></svg>
+        <svg class="center__kiss center__kiss--b"><use href="#kiss"/></svg>
+        <svg class="center__kiss center__kiss--c"><use href="#kiss"/></svg>
+
+        <h1 class="center__title">
+          <span>Happy</span>
+          <span>Birthday</span>
+        </h1>
+        <p class="center__name" id="centerName">Ксюша</p>
+        <div class="center__rule"><span></span><em id="centerAge">27</em><span></span></div>
+        <blockquote class="center__quote" id="centerQuote"></blockquote>
+      </article>
+
+    </div>
+  </section>
+
+  <p class="hint">наведи курсор на фото или нажми — откроется поздравление</p>
+
+</main>
+
+<!-- всплывающая карточка при наведении -->
+<div class="peek" id="peek" hidden>
+  <div class="peek__media"><img id="peekImg" alt=""></div>
+  <div class="peek__body">
+    <div class="peek__text" id="peekText"></div>
+  </div>
+  <div class="peek__more" id="peekMore">нажми, чтобы прочитать целиком</div>
+</div>
+
+<!-- модальное окно -->
+<div class="modal" id="modal" hidden>
+  <button class="modal__close" id="modalClose" aria-label="Закрыть">&times;</button>
+  <button class="modal__nav modal__nav--prev" id="modalPrev" aria-label="Предыдущее">&#8249;</button>
+  <button class="modal__nav modal__nav--next" id="modalNext" aria-label="Следующее">&#8250;</button>
+  <div class="modal__card" id="modalCard">
+    <div class="modal__media"><img id="modalImg" alt=""></div>
+    <div class="modal__side">
+      <svg class="modal__kiss"><use href="#kiss"/></svg>
+      <div class="modal__text" id="modalText"></div>
+    </div>
+  </div>
+</div>
+
+<script src="texts.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
