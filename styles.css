@@ -160,7 +160,7 @@ body{
 /* ---------- подсказка ---------- */
 .hint{
   margin:clamp(16px,2.4vw,28px) 0 0;text-align:center;
-  font-size:11px;letter-spacing:.18em;text-transform:lowercase;color:var(--muted);
+  font-size:11px;letter-spacing:.18em;color:var(--muted);
 }
 
 /* ---------- всплывающая карточка ---------- */
